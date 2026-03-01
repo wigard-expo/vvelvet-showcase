@@ -1,0 +1,130 @@
+$padding: 400px;
+
+.app {
+  min-height: 100vh;
+
+  padding: 0 $padding;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > .hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 100px;
+
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    > .title {
+      font-size: 9rem;
+      font-weight: bold;
+      color: #d50000;
+      letter-spacing: 0.02em;
+      line-height: 0.74;
+      transition: opacity 0.3s;
+    }
+
+    > .title_hidden {
+      opacity: 0;
+    }
+  }
+
+  > .banner {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 calc(-1 * $padding);
+
+    width: calc(100% + 2 * $padding);
+    background-color: #d50000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #000;
+    font-weight: bold;
+
+    > .subtitle {
+      font-size: 7.5rem;
+      line-height: 0.7;
+      padding-bottom: 8px;
+      transition: font-size 0.4s;
+    }
+
+    > .banner_title {
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+      line-height: 0.8;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.4s, transform 0.4s;
+      height: 0;
+      overflow: hidden;
+    }
+
+    > .banner_title_visible {
+      opacity: 1;
+      transform: translateY(0);
+      height: auto;
+    }
+
+    &.banner_sticky {
+      > .subtitle {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  @media (max-width: 1750px) {
+    $padding: 350px;
+    padding: 0 $padding;
+
+    > .banner {
+      margin: 0 calc(-1 * $padding);
+      width: calc(100% + 2 * $padding);
+    }
+  }
+
+  @media (max-width: 1350px) {
+    $padding: 80px;
+    padding: 0 $padding;
+
+    > .banner {
+      margin: 0 calc(-1 * $padding);
+      width: calc(100% + 2 * $padding);
+
+      > .subtitle {
+        font-size: 5rem;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    $padding: 1rem;
+    padding: 0 $padding;
+
+    > .banner {
+      margin: 0 calc(-1 * $padding);
+      width: calc(100% + 2 * $padding);
+
+      > .subtitle {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    > .banner {
+      margin: 0;
+    }
+  }
+}

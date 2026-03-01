@@ -1,0 +1,16 @@
+.button {
+  color: #fff;
+  border: 2px solid #d50000;
+  padding: 0.8rem 2.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #d50000;
+  }
+
+}

@@ -1,0 +1,65 @@
+.city_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  > .info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    > .date {
+      color: #d50000;
+      font-size: 2.8rem;
+      min-width: 120px;
+    }
+
+    > .city {
+      color: #fff;
+      font-size: 2.8rem;
+      min-width: 350px;
+      text-transform: uppercase;
+    }
+
+    > .venue {
+      color: #777;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 1140px) {
+    > .info {
+      > .city {
+        min-width: auto;
+      }
+    }
+  }
+
+  @media (max-width: 842px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    > .info {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      > .date {
+        min-width: auto;
+      }
+
+      > .city {
+        min-width: auto;
+      }
+    }
+  }
+}

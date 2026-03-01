@@ -1,0 +1,29 @@
+@use './assets/fonts/coolvetica/stylesheet';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+*::selection {
+  background: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Coolvetica Condensed', sans-serif;
+  background-color: #111;
+}
+
+a {
+  color: inherit;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #fff;
+  }
+}
